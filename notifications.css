@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    color: white;
+}
+
+
+
+/* Sidebar */
+
+.sidebar {
+    width: 260px;
+    min-height: 100vh;
+    padding: 30px 20px;
+    position: fixed;
+
+    background: rgba(2, 6, 23, 0.85);
+    backdrop-filter: blur(12px);
+
+    border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #3b82f6;
+    margin-bottom: 50px;
+}
+
+.sidebar-links {
+    list-style: none;
+}
+
+.sidebar-links li {
+    margin-bottom: 15px;
+}
+
+.sidebar-links li a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    color: #cbd5e1;
+    padding: 15px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.sidebar-links li a:hover,
+.sidebar-links .active a {
+    background-color: #1e293b;
+    color: #3b82f6;
+}
+
+
+
+/* Main */
+
+.main-content {
+    margin-left: 260px;
+    width: calc(100% - 260px);
+    padding: 40px;
+       background-image:
+        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+        url("notification.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+
+
+/* Header */
+
+.notification-header h1 {
+    font-size: 2.7rem;
+}
+
+.notification-header p {
+    margin-top: 10px;
+    color: #94a3b8;
+}
+
+
+
+/* Count */
+.notification-count {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 250px;
+
+    background: rgba(30,41,59,0.75);
+    backdrop-filter: blur(10px);
+}
+
+.notification-count i {
+    color: #3b82f6;
+    font-size: 1.5rem;
+}
+
+.notification-count span {
+    font-size: 1.4rem;
+}
+
+
+
+/* Notifications */
+
+.notifications-container {
+    margin-top: 35px;
+    display: grid;
+    gap: 20px;
+    
+}
+
+.notification-card {
+    padding: 20px;
+    border-radius: 15px;
+    border-left: 5px solid #3b82f6;
+
+    background: rgba(30,41,59,0.75);
+    backdrop-filter: blur(10px);
+
+    transition: 0.3s;
+}
+
+.notification-card:hover {
+    transform: translateY(-5px);
+    background: rgba(51,65,85,0.85);
+}
+
+.notification-card p {
+    color: #cbd5e1;
+}
+
+
+
+/* Responsive */
+
+@media (max-width: 850px) {
+
+    .sidebar {
+        width: 90px;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .sidebar-links li a {
+        justify-content: center;
+    }
+
+    .main-content {
+        margin-left: 90px;
+        width: calc(100% - 90px);
+    }
+
+}
